@@ -1,0 +1,19 @@
+{
+  "name": "study_crudapp",
+  "version": "1.0.0",
+  "description": "Creating a quick and dirty rendition of to do app for grad assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon node server.js"
+  },
+  "author": "JB, RW, JC, DC",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7",
+    "nodemon": "^2.0.13",
+    "path": "^0.12.7"
+  }
+}
