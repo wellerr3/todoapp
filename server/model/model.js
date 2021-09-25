@@ -1,18 +1,19 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-
-const MONGO_URI = process.env.MONGO_URI;
+const Schema = mongoose.Schema;
+// const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = 'mongodb+srv://moonluck:mishra@cluster0.ht5ng.mongodb.net/to-do?retryWrites=true&w=majority'
   
 
 mongoose.connect(MONGO_URI, {
-  useNewUrlParser: trunInNewContext,
+  useNewUrlParser: true,
   useUnifiedTopology: true, 
-  dbName: 'ToDo',
+  dbName: 'to-do',
 })
     .then(() => console.log('Connected to Mongo DB'))
     .catch(err => console.log(err));
 
-const Schema = mongoose.Schema;
+
 
 const taskSchema = new Schema ({
   taskLabel: {
@@ -27,6 +28,10 @@ const taskSchema = new Schema ({
   dueDate: {
     type: Date, 
     required: true
+  },
+  done: {
+    type: Boolean,
+    default: false
   }
 });
 
